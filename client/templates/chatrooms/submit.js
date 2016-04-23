@@ -4,7 +4,7 @@ Template.submit.events({
 
     $(document).ready(function () {
     $('input[type=text], input[type=password]').attr('autocomplete', 'off');
-    });
+    });  
 
     var chat = {
       content: $(e.target).find('[name=content]').val(),
