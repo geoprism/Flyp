@@ -4,7 +4,7 @@ Template.submit.events({
 
     var chat = {
       content: $(e.target).find('[name=content]').val(),
-      //roomid:
+      ///roomid:123
       author: Meteor.user().emails[0].address,
       timestamp: new Date()
 
@@ -13,5 +13,6 @@ Template.submit.events({
 
     chat._id = Chats.insert(chat);
     $(e.target).find('[name=content]').val('');
+
   }
 })
