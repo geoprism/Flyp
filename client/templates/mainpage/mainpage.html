@@ -1,3 +1,6 @@
 <template name='mainpage'>
-  <h1>Welcome to Flyp</h1>
+  <h2>Current Users</h2>
+  {{#each directory}}
+    {{> user}}
+  {{/each}}
 </template>
