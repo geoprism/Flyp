@@ -5,7 +5,8 @@ Template.submit.events({
     var chat = {
       content: $(e.target).find('[name=content]').val(),
       author: Meteor.user().emails[0].address,
-      timestamp: new Date()
+      timestamp: new Date(),
+      roomid: this._id
     };
 
     chat._id = Chats.insert(chat);
