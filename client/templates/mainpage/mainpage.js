@@ -1,6 +1,9 @@
 Template.mainpage.helpers({
   directory: function(){
     return Meteor.users.find()
+  },
+  chatrooms_list: function(){
+    return Chatrooms.find()
   }
 });
 
@@ -8,12 +11,12 @@ Template.mainpage.events({
   'click': function(e){
     e.preventDefault();
     if(Meteor.users.find().count() > 1){
-      var randomer = Math.floor((Math.random() * Meteor.users.find().count()) + 1);
-      var second_user = Random.choice(Meteor.users.find());
-
+      var second_user = Random.choice(Meteor.users.find().fetch());
+      while(second_user._id === Meteor.user()._id)
+        second_user = Random.choice(Meteor.users.find().fetch());
       var chatroom = {
-        author: Meteor.user(),
-        receiver: second_user,
+        author: Meteor.user()._id,
+        receiver: second_user._id,
         title:'test'
       };
       chatroom._id = Chatrooms.insert(chatroom);

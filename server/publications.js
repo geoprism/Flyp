@@ -1,5 +1,5 @@
-Meteor.publish('chatrooms', function(author){
-  return Chatrooms.find({});
+Meteor.publish('chatrooms', function(){
+  return Chatrooms.find({$or: [{author:this.userId},{receiver:this.userId}]});
 });
 
 Meteor.publish('chats', function(chatroom_id){
