@@ -58,3 +58,7 @@ div.slide {
   height: 460px;
   background-color: #e9ebec;
 }
+
+.chatroom-buttons{
+  width:100%;
+}
