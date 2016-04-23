@@ -7,7 +7,9 @@ Template.submit.events({
       author: Meteor.user().emails[0].address,
       timestamp: new Date()
     };
+
     chat._id = Chats.insert(chat);
+    $('html, body').scrollTop( $(document).height() );
     $(e.target).find('[name=content]').val('');
 
   }
