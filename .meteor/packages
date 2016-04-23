@@ -25,3 +25,4 @@ iron:router
 sacha:spin
 momentjs:moment
 random
+gwendall:template-animations

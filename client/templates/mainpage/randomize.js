@@ -8,7 +8,7 @@ Template.randomize.events({
       var chatroom = {
         author: Meteor.user()._id,
         receiver: second_user._id,
-        title:'test'
+        exchanges: 0
       };
       chatroom._id = Chatrooms.insert(chatroom);
       Router.go('chatrooms', chatroom);
