@@ -1,1 +1,77 @@
-/* CSS declarations go here */
+/* main.css */
+
+$screen_resolution_x: 320px;
+$screen_resolution_y: 480px;
+
+$font1: 'Lato', sans-serif;
+$font2: 'Dancing Script', cursive;
+
+$teal: #006666;
+$tan: #AAA694;
+$light_gray: #e9ebec;
+$dark_gray: #C5CDCE;
+$yellow: #DBEC48;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+div.clear {
+    width: 100%;
+    clear: both;
+}
+body {
+    background-color: white;
+    font-family: $font1;
+    font-size: 20px;
+    line-height: 20px;
+    
+    div.center-box {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        top:25%;
+    }
+    
+    div.title {
+        width: 100%;
+        overflow: hidden;
+        color: $teal;
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: bold;
+        text-align: center;
+        height: auto;
+        text-shadow: 1px 1px 2px #d8d8d8;
+    }
+    div.email {
+        overflow: auto;
+        margin: 0px auto;
+    }
+    input[type="text"].email {
+        font-size: 24px;
+        line-height: 34px;
+        height: 34px;
+        color: #727272;
+        width: 82%;
+        padding-left: 3%;
+        padding-right: 3%;
+        
+        box-shadow: inset 0px 2px 4px #C5CDCE;
+        border: none;
+        border-width: 0;
+        margin: 0;
+        outline: none;
+        
+        margin-left: 16px;
+    }
+}
+div.slide {
+    $slide_padding: 10px;
+    padding: $slide_padding;
+    width: $screen_resolution_x - (2 * $slide_padding);
+    height: $screen_resolution_y - (2 * $slide_padding);
+    
+    background-color: #e9ebec;
+    
+}
