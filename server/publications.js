@@ -1,9 +1,9 @@
 Meteor.publish('chatrooms', function(author){
-  return Chatrooms.find({author:author});
+  return Chatrooms.find({});
 });
 
 Meteor.publish('chats', function(chatroom_id){
-  return Chats.find({chatroom_id:chatroom_id});
+  return Chats.find({});
 });
 
 Meteor.publish('directory', function(){

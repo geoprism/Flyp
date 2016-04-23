@@ -1,5 +1,5 @@
 Template.chatrooms.helpers({
-  chatList: function(){
+  chatlist: function(){
     return Chatrooms.find();
   }
 });
