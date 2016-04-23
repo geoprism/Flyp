@@ -9,7 +9,7 @@ Template.mainpage.events({
     e.preventDefault();
     if(Meteor.users.find().count() > 1){
       var randomer = Math.floor((Math.random() * Meteor.users.find().count()) + 1);
-      var second_user = Meteor.users.find().fetch()[randomer];
+      var second_user = Random.choice(Meteor.users.find());
 
       var chatroom = {
         author: Meteor.user(),

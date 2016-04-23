@@ -12,5 +12,6 @@ Template.submit.events({
 
 
     chat._id = Chats.insert(chat);
+    $(e.target).find('[name=content]').val('');
   }
 })
