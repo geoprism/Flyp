@@ -1,6 +1,10 @@
 <template name='chatrooms'>
   {{#if flypped}}
-    <h1 align="center">{{roomname}}</h1>
+    <div>
+    {{#transition in="flipInY" out="flipOutY"}}
+      <h1 align="center">{{roomname}}</h1>
+    {{/transition}}
+    </div>
   {{else}}
     <h1 align="center">Anonymous</h1>
     <h6 align="center">(flips after five exchanges)</h6>

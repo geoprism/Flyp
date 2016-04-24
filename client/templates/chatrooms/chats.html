@@ -1,19 +1,19 @@
 <template name='chats'>
-
-
-  {{#if yours}}
-    <div class="speech-bubble righto round">
-        <h6 align='right' class='message'>{{content}}</h6>
-    </div>
-    <div class="clear"></div>
-    <h6 align='right' class='date'>{{time}}</h6>
-    <div class="clear"></div>
-  {{else}}
-    <div class="speech-bubble lefto round">
-        <h6 align='left' class='message'>{{content}}</h6>
-    </div>
-    <div class="clear"></div>
-    <h6 align='left' class='date'>{{time}}</h6>
-    <div class="clear"></div>
-  {{/if}}
+  <div class='yourchats'>
+    {{#if yours}}
+        <div class="chatted speech-bubble righto round">
+            <h6 align='right' class='message'>{{content}}</h6>
+        </div>
+        <div class="clear"></div>
+        <h6 align='right' class='date'>{{time}}</h6>
+        <div class="clear"></div>
+    {{else}}
+      <div class="chatted speech-bubble lefto round">
+          <h6 align='left' class='message'>{{content}}</h6>
+      </div>
+      <div class="clear"></div>
+      <h6 align='left' class='date'>{{time}}</h6>
+      <div class="clear"></div>
+    {{/if}}
+  </div>
 </template>
