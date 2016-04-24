@@ -1,6 +1,6 @@
 <template name='mainpage'>
-    <h3>Hello,</h3>
-    <p>{{person}} from {{school}} </p>
+    <h3>Hello, {{person}}</h3>
+    <p>     from {{school}} </p>
     <br>
   <h3>Active Users</h3>
   <div class='collection'>
@@ -9,7 +9,7 @@
     {{/each}}
   </div>
   <br>
-  <h3>Active Chatrooms </h3>
+  <h3>Active Chatrooms</h3>
   <div class='collection'>
   {{#each chatrooms_list}}
     {{> rooms}}

@@ -1,5 +1,6 @@
 Template.user.helpers({
   email: function(){
-    return (this.name + " (" + this._id + " " + this.college+ ")");
+    var schooly = this.college.split(".");
+    return (this.name + " (" + schooly[0].toUpperCase()+ ")");
   }
 });

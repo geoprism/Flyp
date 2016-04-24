@@ -27,7 +27,7 @@ Template.submit.events({
             roomid: this._id
           };
           var chatroom = Chatrooms.findOne({_id: this._id});
-          var exchanges_num = chatroom.exchanges + 2;
+          var exchanges_num = chatroom.exchanges + 1;
           Chatrooms.update({_id: this._id}, {$set:{exchanges: exchanges_num}});
         }
     }
