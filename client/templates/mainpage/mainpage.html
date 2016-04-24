@@ -1,5 +1,8 @@
 <template name='mainpage'>
-  <h2>Active Users</h2>
+    <h1>You are currently</h1>
+    <p>{{person}} from {{school}} </p>
+
+  <h1>Active Users</h1>
   {{#each directory}}
     {{> user}}
   {{/each}}
