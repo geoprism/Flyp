@@ -1,5 +1,5 @@
 Template.randomize.events({
-  'click': function(e){
+  'click .randomize': function(e){
     e.preventDefault();
     if(Meteor.users.find().count() > 1){
       var second_user = Random.choice(Meteor.users.find().fetch());
