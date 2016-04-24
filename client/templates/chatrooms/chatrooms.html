@@ -1,8 +1,9 @@
 <template name='chatrooms'>
   {{#if flypped}}
-    <h1>Chatting with the lovely {{roomname}}</h1>
+    <h1 align="center">{{roomname}}</h1>
   {{else}}
-    <h1>Chatting with an amazing stranger</h1>
+    <h1 align="center">Anonymous</h1>
+    <h6 align="center">(flips after five exchanges)</h6>
   {{/if}}
   {{#each chatlist}}
     {{> chats}}

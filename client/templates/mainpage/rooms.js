@@ -4,13 +4,13 @@ Template.rooms.helpers({
       if(this.exchanges >=5 )
         return Meteor.users.findOne(this.author).emails[0].address;
       else {
-        return 'ANON';
+        return 'Classmate';
       }
     else
       if(this.exchanges >=5 )
         return Meteor.users.findOne(this.receiver).emails[0].address;
       else {
-        return 'ANON';
+        return 'Classmate';
       }
   }
 });
