@@ -1,4 +1,4 @@
-var list_colleges = ['uci.edu', 'ucsd.edu', 'ucr.edu', 'ucla.edu', 'ucsb.edu', 'ucsc.edu'];
+var list_colleges = ['uci.edu', 'ucsd.edu', 'ucr.edu', 'ucla.edu', 'ucsb.edu', 'ucsc.edu','ucb.edu'];
 Template.signup.events({
   'submit form': function(e){
     e.preventDefault();
@@ -20,6 +20,7 @@ Template.signup.events({
         Accounts.createUser({
           name: $(e.target).find('[name=name]').val(),
           email:$(e.target).find('[name=emailAddress]').val(),
+          college: emailaddlist[1],
           password:$(e.target).find('[name=password]').val() }, (error)=>{
           if(error){
             console.log('test5');
