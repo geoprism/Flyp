@@ -1,15 +1,19 @@
 <template name='mainpage'>
-    <h1>You are currently</h1>
+    <h3>Hello,</h3>
     <p>{{person}} from {{school}} </p>
     <br>
-  <h1>Active Users</h1>
-  {{#each directory}}
-    {{> user}}
-  {{/each}}
+  <h3>Active Users</h3>
+  <div class='collection'>
+    {{#each directory}}
+      {{> user}}
+    {{/each}}
+  </div>
   <br>
-  <h1> Active Chatrooms </h1>
+  <h3>Active Chatrooms </h3>
+  <div class='collection'>
   {{#each chatrooms_list}}
     {{> rooms}}
   {{/each}}
+  </div>
   {{>randomize}}
 </template>
