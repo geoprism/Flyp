@@ -1,4 +1,4 @@
-var list_colleges = ['uci.edu', 'ucsd.edu', 'ucr.edu', 'ucla.edu', 'ucsb.edu', 'ucsc.edu'];
+var list_colleges = ['uci.edu', 'ucsd.edu', 'ucr.edu', 'ucla.edu', 'ucsb.edu', 'ucsc.edu','ucb.edu'];
 Template.signup.events({
   'submit form': function(e){
     e.preventDefault();
