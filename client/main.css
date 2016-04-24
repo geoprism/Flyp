@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  color: #363636;
 }
 
 div.clear {
@@ -76,6 +77,14 @@ div.slide {
     max-width: 300px;
 
 
+}
+
+h1 {
+    text-shadow:0px 1px 1px #626262;
+}
+
+h2  {
+    
 }
 
 .message {
