@@ -4,10 +4,10 @@ Template.chatrooms.helpers({
   },
   roomname: function(){
     if(this.author === Meteor.user()._id){
-      return Meteor.users.findOne(this.receiver).emails[0].address;
+      return Meteor.users.findOne(this.receiver).name;
     }
     else {
-      return Meteor.users.findOne(this.author).emails[0].address;
+      return Meteor.users.findOne(this.author).name;
     }
   },
 
