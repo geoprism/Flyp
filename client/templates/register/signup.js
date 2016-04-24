@@ -19,6 +19,7 @@ Template.signup.events({
         console.log('test4');
         Accounts.createUser({
           name: $(e.target).find('[name=name]').val(),
+          partners: [],
           email:$(e.target).find('[name=emailAddress]').val(),
           college: emailaddlist[1],
           password:$(e.target).find('[name=password]').val() }, (error)=>{
@@ -28,7 +29,6 @@ Template.signup.events({
           }
           else{
             console.log('test6');
-            console.log('test7');
             Router.go('/');
           }
         });
