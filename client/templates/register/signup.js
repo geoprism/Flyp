@@ -20,6 +20,7 @@ Template.signup.events({
         Accounts.createUser({
           name: $(e.target).find('[name=name]').val(),
           email:$(e.target).find('[name=emailAddress]').val(),
+          college: emailaddlist[1],
           password:$(e.target).find('[name=password]').val() }, (error)=>{
           if(error){
             console.log('test5');
