@@ -11,7 +11,9 @@ person: function(){
 },
 
 school: function(){
-    return Meteor.user().college;
+    var schooly = Meteor.user().college.split(".");
+
+    return schooly[0].toUpperCase();
 }
 
 
