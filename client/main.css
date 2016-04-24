@@ -23,14 +23,10 @@ div.clear {
 }
 
 body {
+    background-color: white;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 20px;
   line-height: 20px;
-  background-image: url('http://i.imgur.com/F5dZjYa.png');
-  background-color:inherit;
-  background-repeat: repeat;
-  background-size: 40px 40px;
-
 }
 body div.center-box {
   width: 100%;
