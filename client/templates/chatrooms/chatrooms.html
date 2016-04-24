@@ -1,5 +1,9 @@
 <template name='chatrooms'>
-  <h1>Chatroom!</h1>
+  {{#if flypped}}
+    <h1>Chatting with the lovely {{roomname}}</h1>
+  {{else}}
+    <h1>Chatting with an amazing stranger</h1>
+  {{/if}}
   {{#each chatlist}}
     {{> chats}}
   {{/each}}
