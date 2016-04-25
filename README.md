@@ -1,2 +1,2 @@
 # Flyp
-A dope app at SBHacks
+A social networking app at SBHacks
