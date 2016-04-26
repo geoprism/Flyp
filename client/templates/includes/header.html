@@ -1,6 +1,14 @@
 
 <template name="header">
   <nav class="headernav navbar navbar-default" role="navigation">
+    <a class="navbar-brand title" href="{{pathFor 'mainpage'}}" ><img src="https://i.imgur.com/o8NlZk3.png" width="50" height="50" style="margin-top:-16px;" /></a>
+    {{> signout align="right"}}
+  </nav>
+</template>
+
+<!--
+<template name="header">
+  <nav class="headernav navbar navbar-default" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
         <span class="sr-only">Toggle navigation</span>
@@ -17,4 +25,4 @@
       </ul>
     </div>
   </nav>
-</template>
+</template> -->
