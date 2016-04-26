@@ -3,17 +3,17 @@
     <p>     from {{school}} </p>
     <br>
   <h3>Active Users</h3>
-  <div class='collection'>
+  <ul class='collection name-list'>
     {{#each directory}}
       {{> user}}
     {{/each}}
-  </div>
+  </ul>
   <br>
   <h3>Active Chatrooms</h3>
-  <div class='collection'>
-  {{#each chatrooms_list}}
-    {{> rooms}}
-  {{/each}}
-  </div>
+  <ul class='collection room-list'>
+    {{#each chatrooms_list}}
+      <li class='collection-item'>{{> rooms}}</li>
+    {{/each}}
+  </ul>
   {{>randomize}}
 </template>

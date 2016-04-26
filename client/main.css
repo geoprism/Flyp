@@ -24,7 +24,6 @@ h1.flyp{
 }
 
 .mainpage{
-  background-color:#008080;
   width:100%;
   min-height:100%;
 }
@@ -38,7 +37,10 @@ input::-webkit-input-placeholder {
 color: white !important;
 }
 
-
+.signout{
+  margin-top:10px;
+  margin-right:8px;
+}
 
 .labelsignup{
   color:white;
@@ -50,10 +52,7 @@ div.clear {
   clear: both;
 }
 
-.signout{
-  margin-top: 7px;
-  margin-right:10px;
-}
+
 
 .title {
     font-family: "Arial";
@@ -197,4 +196,8 @@ h6{
   border-radius: 30px;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
+}
+
+.name-list .name{
+
 }
