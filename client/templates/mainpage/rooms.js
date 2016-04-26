@@ -10,7 +10,7 @@ Template.rooms.helpers({
       if(this.exchanges >=5 )
         return Meteor.users.findOne(this.receiver).name;
       else {
-        return '(exchange'+(5-this.exchanges).toString() + 'messages to reveal)';
+        return '(exchange '+(5-this.exchanges).toString() + ' messages to reveal)';
       }
   }
 });
