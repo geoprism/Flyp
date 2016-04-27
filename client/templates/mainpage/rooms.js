@@ -51,7 +51,7 @@ Template.rooms.helpers({
     else {
       if(this.pop_alert_author){
         if(this.exchanges >= 5)
-          sAlert.warning(Meteor.users.findOne({_id:this.receiver}).name+':'+Chats.findOne({roomid: this._id}, {sort: {timestamp: -1, limit: 1}}).content);
+          sAlert.warning(Meteor.users.findOne({_id:this.receiver}).name+': '+Chats.findOne({roomid: this._id}, {sort: {timestamp: -1, limit: 1}}).content);
         else {
           sAlert.warning("Anonymous"+': '+Chats.findOne({roomid: this._id}, {sort: {timestamp: -1, limit: 1}}).content);
         }
