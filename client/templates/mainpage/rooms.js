@@ -1,3 +1,15 @@
+Template.rooms.events({
+  'click':function(){
+    console.log('clicked');
+    if(this.receiver == Meteor.user()._id){
+      Chatrooms.update({_id: this._id}, {$set:{alert_receiver: false}});
+    }
+    else{
+      Chatrooms.update({_id: this._id}, {$set:{alert_author: false}});
+    }
+  }
+})
+
 Template.rooms.helpers({
   partner: function(){
     if(this.receiver == Meteor.user()._id)
@@ -12,5 +24,45 @@ Template.rooms.helpers({
       else {
         return '(exchange '+(5-this.exchanges).toString() + ' messages to reveal)';
       }
+  },
+
+  alert: function(){
+    console.log('alert_receiver:');
+    console.log(this.alert_receiver);
+    console.log('alert_receiver:');
+    console.log(this.alert_author);
+    if(this.receiver == Meteor.user()._id){
+      if(this.pop_alert_receiver){
+        //sAlert.warning('New message! from ' + Meteor.users.findOne({_id:this.author}).name);
+        if(this.exchanges >=5)
+          sAlert.warning(Meteor.users.findOne({_id:this.author}).name+': '+Chats.findOne({roomid: this._id}, {sort: {timestamp: -1, limit: 1}}).content);
+        else{
+          sAlert.warning("Anonymous"+': '+Chats.findOne({roomid: this._id}, {sort: {timestamp: -1, limit: 1}}).content);
+        }
+        Chatrooms.update({_id: this._id}, {$set:{pop_alert_receiver: false}});
+      }
+      if(this.alert_receiver){
+        return "New Message!";
+      }
+      else{
+        return "";
+      }
+    }
+    else {
+      if(this.pop_alert_author){
+        if(this.exchanges >= 5)
+          sAlert.warning(Meteor.users.findOne({_id:this.receiver}).name+':'+Chats.findOne({roomid: this._id}, {sort: {timestamp: -1, limit: 1}}).content);
+        else {
+          sAlert.warning("Anonymous"+': '+Chats.findOne({roomid: this._id}, {sort: {timestamp: -1, limit: 1}}).content);
+        }
+        Chatrooms.update({_id: this._id}, {$set:{pop_alert_author: false}});
+      }
+      if(this.alert_author){
+        return "New Message!";
+      }
+      else{
+        return "";
+      }
+    }
   }
 });

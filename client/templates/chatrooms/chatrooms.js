@@ -15,3 +15,17 @@ Template.chatrooms.helpers({
     return this.exchanges >= 5;
   }
 });
+
+Template.chatrooms.events({
+  'click, focus, blur':function(){
+    console.log('clicked event');
+    if(this.author === Meteor.user()._id){
+      Chatrooms.update({_id: this._id}, {$set:{alert_author: false}});
+      Chatrooms.update({_id: this._id}, {$set:{pop_alert_author: false}});
+    }
+    else{
+      Chatrooms.update({_id: this._id}, {$set:{alert_receiver: false}});
+      Chatrooms.update({_id: this._id}, {$set:{pop_alert_receiver: false}});
+    }
+  }
+});

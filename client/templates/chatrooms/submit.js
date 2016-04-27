@@ -31,9 +31,21 @@ Template.submit.events({
           Chatrooms.update({_id: this._id}, {$set:{exchanges: exchanges_num}});
         }
     }
+
     chat._id = Chats.insert(chat);
+
+    if(this.receiver == Meteor.user()._id){
+      Chatrooms.update({_id: this._id}, {$set:{alert_author: true}});
+      Chatrooms.update({_id: this._id}, {$set:{pop_alert_author: true}});
+    }
+    else{
+      Chatrooms.update({_id: this._id}, {$set:{alert_receiver: true}});
+      Chatrooms.update({_id: this._id}, {$set:{pop_alert_receiver: true}});
+    }
     $('html, body').scrollTop( $(document).height() );
     $(e.target).find('[name=content]').val('');
+
+
 
   }
 })
