@@ -40,3 +40,9 @@ Template.signup.events({
     }
   }
 });
+
+Template.signup.onRendered(function(){
+  $('.back-button').click(function(){
+    Router.go('/');
+  })
+});

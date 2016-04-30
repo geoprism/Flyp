@@ -7,7 +7,7 @@
 }
 
 input, textarea{
-    color: #E5E500 !important;
+    color: #4A777A !important;
 }
 
 
@@ -18,7 +18,7 @@ html, body {
 }
 
 h1.flyp{
-  color:#E5E500;
+  color:#4A777A;
   font-size:120px;
   font-family: 'Wire One', sans-serif;
 }
@@ -34,13 +34,14 @@ h1.flyp{
 
 
 input::-webkit-input-placeholder {
-color: white !important;
+color: #4A777A !important;
 }
 
 .signout{
   margin-top:10px;
   margin-right:8px;
 }
+
 
 .labelsignup{
   color:white;
@@ -51,8 +52,17 @@ div.clear {
   width: 100%;
   clear: both;
 }
+.header-container{
+  text-align:center;
+}
 
 
+.header-title{
+  display:inline-block;
+  position:absolute;
+  color:white;
+  font-size: 41px;
+}
 
 .title {
     font-family: "Arial";
@@ -61,10 +71,11 @@ div.clear {
 }
 
 body {
-    background-color: #006C6C;
+    background-color: 'white';
   font-family: "Helvetica Neue", sans-serif;
   font-size: 20px;
   line-height: 20px;
+  padding-top:60px;
 }
 body div.center-box {
   width: 100%;
@@ -127,30 +138,34 @@ div.slide {
 
 h1 {
     text-shadow:0px 1px 1px #626262;
-    color:#E5E500;
+    color:#36648B;
 }
 h2{
-  color:#E5E500;
+  color:#36648B;
 }
 
 h3{
-  color:#E5E500;
+  color:#36648B;
 }
 
 h4{
-  color:#E5E500;
+  color:#36648B;
+}
+
+.randomize h4{
+  color:white;
 }
 
 h5{
   text-align:center;
-  color:#E5E500;
+  color:#36648B;
 }
 
 .speech-bubble h5{
   color:black;
 }
 h6{
-  color:black;
+  color:white;
   font-size:18px;
 }
 
@@ -163,6 +178,7 @@ h6{
   width:100%;
   margin-top:40px;
   margin-bottom:20px;
+  background-color:#ff7f7f;
 }
 
 .emailcard{
@@ -178,16 +194,17 @@ h6{
 }
 .message {
     padding: 1px 13px;
-    min-width: 50px;
+    min-width: 5px;
+    word-wrap:break-word;
 }
 .lefto{
-    background-color: #E9EBEC;
+    background-color: #ff7f7f;
     float: left;
     text-align: left;
 }
 
 .righto{
-    background-color: #D9ED56;
+    background-color: #00688B;
     float: right;
     text-align: right;
 }

@@ -1,6 +1,5 @@
 Template.rooms.events({
   'click':function(){
-    console.log('clicked');
     if(this.receiver == Meteor.user()._id){
       Chatrooms.update({_id: this._id}, {$set:{alert_receiver: false}});
     }
@@ -27,10 +26,6 @@ Template.rooms.helpers({
   },
 
   alert: function(){
-    console.log('alert_receiver:');
-    console.log(this.alert_receiver);
-    console.log('alert_receiver:');
-    console.log(this.alert_author);
     if(this.receiver == Meteor.user()._id){
       if(this.pop_alert_receiver){
         //sAlert.warning('New message! from ' + Meteor.users.findOne({_id:this.author}).name);

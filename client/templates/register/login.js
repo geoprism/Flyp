@@ -1,5 +1,4 @@
 Template.login.events({
-
   'submit form': function(e){
     e.preventDefault();
     var email = $(e.target).find('[name=emailAddress]').val();
@@ -13,4 +12,10 @@ Template.login.events({
       }
     });
   }
+});
+
+Template.login.onRendered(function(){
+  $('.back-button').click(function(){
+    Router.go('/');
+  })
 });

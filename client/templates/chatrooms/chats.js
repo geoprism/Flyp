@@ -3,6 +3,7 @@ Template.chats.helpers({
       return moment(this.timestamp).format('h:mm a');
   },
   yours: function(){
-    return this.author === Meteor.user().emails[0].address;
+    curr_user = Meteor.user();
+    return curr_user && this.author === curr_user.emails[0].address;
   }
 });

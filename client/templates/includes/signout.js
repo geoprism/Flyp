@@ -1,7 +1,7 @@
 Template.signout.events({
   'click': function(){
     Meteor.logout();
-    Router.go('/');
+    console.log("CLICKED");
+    $(".button-collapse").sideNav("hide");
   }
-
 })
