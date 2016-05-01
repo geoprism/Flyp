@@ -56,12 +56,23 @@ div.clear {
   text-align:center;
 }
 
-
-.header-title{
-  display:inline-block;
-  position:absolute;
-  color:white;
-  font-size: 41px;
+@media only screen and (max-width: 700px){
+  .header-title{
+    display:inline-block;
+    position:absolute;
+    left:40%;
+    color:white;
+    font-size: 41px;
+  }
+}
+@media only screen and (min-width: 701px){
+  .header-title{
+    display:inline-block;
+    position:absolute;
+    left:45%;
+    color:white;
+    font-size: 41px;
+  }
 }
 
 .title {
@@ -131,9 +142,12 @@ div.slide {
   position: relative;
 	width: auto;
 	height: auto;
-    max-width: 300px;
+  max-width: 300px;
+}
 
-
+.submit-button{
+  color:white !important;
+  background-color: #36648B;
 }
 
 h1 {
@@ -164,10 +178,18 @@ h5{
 .speech-bubble h5{
   color:black;
 }
+
+
+.date-container .date{
+  color:black;
+  font-size:15px;
+}
+
 h6{
   color:white;
   font-size:18px;
 }
+
 
 .jumbotron {
     background-color: inherit;

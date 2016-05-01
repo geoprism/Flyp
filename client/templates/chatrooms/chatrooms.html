@@ -10,9 +10,11 @@
       <h1 align="center">Anonymous</h1>
       <h6 align="center">(flips after five exchanges)</h6>
     {{/if}}
-    {{#each chatlist}}
-      {{> chats}}
-    {{/each}}
+    {{#transition in="bounceIn:400"}}
+      {{#each chatlist}}
+        {{> chats}}
+      {{/each}}
+    {{/transition}}
     {{> submit}}
   </div>
 </template>

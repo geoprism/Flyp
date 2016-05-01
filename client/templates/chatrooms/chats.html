@@ -5,14 +5,18 @@
             <h6 align='right' class='message'>{{content}}</h6>
         </div>
         <div class="clear"></div>
-        <h6 align='right' class='date'>{{time}}</h6>
+        <div class='date-container'>
+          <h6 align='right' class='date'>{{time}}</h6>
+        </div>
         <div class="clear"></div>
     {{else}}
       <div class="chatted speech-bubble lefto round">
           <h6 align='left' class='message'>{{content}}</h6>
       </div>
       <div class="clear"></div>
-      <h6 align='left' class='date'>{{time}}</h6>
+      <div class='date-container'>
+        <h6 align='left' class='date'>{{time}}</h6>
+      </div>
       <div class="clear"></div>
     {{/if}}
   </div>

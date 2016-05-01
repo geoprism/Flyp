@@ -8,9 +8,11 @@ Template.randomize.events({
     var all_current_partners = [];
     for(i=0; i<authored_chatrooms.length; i++){
       all_current_partners.push(authored_chatrooms[i].receiver);
+      all_current_partners.push(authored_chatrooms[i].author);
     }
     for(i=0; i<received_chatrooms.length; i++){
       all_current_partners.push(received_chatrooms[i].receiver);
+      all_current_partners.push(received_chatrooms[i].author);
     }
     all_current_partners = _.uniq(all_current_partners);
     if(Meteor.users.find({college: Meteor.user().college}).count() - all_current_chatrooms.length > 1){
@@ -31,5 +33,6 @@ Template.randomize.events({
     }
     else
       alert("Not enough users in your univerity! Please wait for more users to be registered");
+      $('.randomize').blur();
   }
-})
+});
