@@ -35,3 +35,6 @@ Template.chatrooms.events({
     }
   }
 });
+Template.chatrooms.onRendered(function(){
+  window.scrollTo(0,document.body.scrollHeight);
+});
