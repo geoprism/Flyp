@@ -150,6 +150,17 @@ div.slide {
   background-color: #36648B;
 }
 
+textarea
+{
+  width:100%;
+}
+
+input.break {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
+
 h1 {
     text-shadow:0px 1px 1px #626262;
     color:#36648B;

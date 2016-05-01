@@ -1,6 +1,6 @@
 Template.chatrooms.helpers({
   chatlist: function(){
-    return Chats.find({roomid : this._id});
+    return Chats.find({roomid : this._id},{sort:{timestamp:-1},limit:20}).fetch().reverse();
   },
   roomname: function(){
     if(Meteor.user()){
