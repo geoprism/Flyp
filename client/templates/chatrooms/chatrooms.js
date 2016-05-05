@@ -37,4 +37,8 @@ Template.chatrooms.events({
 });
 Template.chatrooms.onRendered(function(){
   window.scrollTo(0,document.body.scrollHeight);
+  $(".button-collapse").sideNav();
+  $(".sidenav-button").click(function(){
+    $(".button-collapse").sideNav("hide");
+  });
 });

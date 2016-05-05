@@ -62,9 +62,18 @@ div.clear {
 }
 .header-container{
   text-align:center;
+  display:inline-block;
+  width:100%;
+  position:fixed;
+  pointer-events: none
 }
 
-@media only screen and (max-width: 700px){
+.header-title{
+  font-size:41px;
+  color:white;
+}
+
+/*@media only screen and (max-width: 700px){
   .header-title{
     display:inline-block;
     position:absolute;
@@ -81,7 +90,7 @@ div.clear {
     color:white;
     font-size: 41px;
   }
-}
+}*/
 
 .title {
     font-family: "Arial";
@@ -94,7 +103,7 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 20px;
   line-height: 20px;
-  padding-top:60px;
+  padding-top:70px;
 }
 body div.center-box {
   width: 100%;

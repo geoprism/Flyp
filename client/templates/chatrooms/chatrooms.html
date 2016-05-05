@@ -1,13 +1,26 @@
 <template name='chatrooms'>
-  <div class='chatroom'>
-    {{#if flypped}}
-      <div>
-        <h1 align="center">{{roomname}}</h1>
-      </div>
-    {{else}}
-      <h1 align="center">Anonymous</h1>
-      <h6 align="center">(flips after five exchanges)</h6>
-    {{/if}}
+  <nav class= "navbar navbar-fixed-top blue-grey darken-2 mainnav">
+    <div class='header-container'>
+      {{#if flypped}}
+      <p class='header-title'> {{roomname}} </p>
+      {{else}}
+      <p class='header-title'> Anonymous </p>
+      {{/if}}
+    </div>
+    <div class="hide-on-med-and-down">
+      <ul class="right">
+        <li><a href="{{pathFor 'mainpage'}}">Home</a></li>
+        {{> signout}}
+      </ul>
+    </div>
+    <ul id="slide-out" class="side-nav">
+      <h2 style='text-align:center;'>flyp</h2>
+      <li class='sidenav-button'><a href="{{pathFor 'mainpage'}}">Home</a></li>
+      {{> signout}}
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  </nav>
+  <div class='chatroom container-fluid'>
     <div class='chat-container'>
       {{#each chatlist}}
         {{> chats}}
