@@ -8,9 +8,11 @@
       <h1 align="center">Anonymous</h1>
       <h6 align="center">(flips after five exchanges)</h6>
     {{/if}}
-    {{#each chatlist}}
-      {{> chats}}
-    {{/each}}
+    <div class='chat-container'>
+      {{#each chatlist}}
+        {{> chats}}
+      {{/each}}
+    </div>
     {{> submit}}
   </div>
 </template>

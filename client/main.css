@@ -30,8 +30,16 @@ h1.flyp{
 
 .submitmessage{
   padding-bottom:20px;
+  position:fixed;
+  bottom:0px;
+  background-color:white;
+  width:100%;
+
 }
 
+.chat-container{
+  margin-bottom:130px;
+}
 
 input::-webkit-input-placeholder {
 color: #4A777A !important;
