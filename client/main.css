@@ -203,6 +203,13 @@ h5{
   color:#36648B;
 }
 
+.title .status{
+  color:grey;
+  font-size:10px;
+  border:0;
+  height:10px;
+}
+
 .speech-bubble h5{
   color:black;
 }
